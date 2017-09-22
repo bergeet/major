@@ -639,4 +639,8 @@ div.gitTrend {
     max-width: 80%
 }
 
+#contrCSStext {
+    position:relative;
+}
+
 

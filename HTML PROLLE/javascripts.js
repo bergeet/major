@@ -215,13 +215,18 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
             var full_name = data.items[j].full_name;
             console.log(full_name);
 
+
+            $("#contrCSStext").append(name); // Funkar inte riktigt 
             $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (data, status ){
                 if (status == 'success') {
                     $.each(data, function(i, item){
                         var contrAvatar = item.avatar_url;
                         console.log(contrAvatar); 
                        
-                        $("#contrCSS").append( " <img id = 'contrCSSimg' src='"+contrAvatar+"'> ");
+                        $("#gitTrendCSS").append("<img id = 'contrCSSimg' src='"+contrAvatar+"'>");
+                       
+                        
+                        
                     })
                 }
             })
