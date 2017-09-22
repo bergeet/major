@@ -221,7 +221,7 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
                         var contrAvatar = item.avatar_url;
                         console.log(contrAvatar); 
                        
-                        $("#CSStrend").append("<img id = 'contrCSSimg' src='"+contrAvatar+"'>");
+                        $("#contrCSS").append( " <img id = 'contrCSSimg' src='"+contrAvatar+"'> ");
                     })
                 }
             })

@@ -618,10 +618,27 @@ h3#projects {
 
 }
 
+div.gitTrend {
+   
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+}
 #contrCSSimg {
+    
     height: auto;
-    width: 20%;
+    display: inline-block;
+    width: 10%;
+    border-radius: 10px;
 }
 
+#contrCSS {
+    margin: 15% auto;
+    max-width: 80%
+}
 
 
