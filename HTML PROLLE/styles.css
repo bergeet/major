@@ -203,68 +203,6 @@ div#contactForm {
     font-size: 1.2em;
 }
 
-@media screen and (max-width: 768px) {
-
-    
-
-    p#showMoreDevs {
-        margin-left: -20%;
-        float:none;
-        
-    }
-
-    .slideshow {
-       
-    }
-
-    .twoColumns#projekt {
-        float: none;
-        
-    }
-
-    .twoColumns#projekt h2 {
-        
-        width: 100%;
-    }
-
-    #JStrend {
-       
-        width: 100%;
-        
-    }
-    
-    #CSStrend {
-       
-        
-        width: 100%;
-    }
-
-    .twoColumns768px {
-        float: none;
-    }
-
-    #page .h2 {
-        font-size: 0.8em;
-    }
-    
-    .textHeading {
-        font-size: 1.2em;
-    }
-
-    #page h1 {
-        
-        font-size: 1.4em;
-    }
-
-
-
-    .innerColumns {
-        text-align: center;
-    }
-  
-}
-
-
 
 h3#projects {
     float: left;
@@ -464,6 +402,68 @@ h3#projects {
     position:relative;
 }
 
+@media screen and (max-width: 768px) {
+    
+        
+    
+        p#showMoreDevs {
+            margin-left: -20%;
+            float:none;
+            
+        }
+    
+        .slideshow {
+            
+        }
+    
+        .twoColumns#projekt {
+            float: none;
+            
+        }
+    
+        .twoColumns#projekt h2 {
+            
+            width: 100%;
+        }
+    
+        #JStrend {
+           
+            width: 100%;
+            
+        }
+        
+        #CSStrend {
+           
+            
+            width: 100%;
+        }
+    
+        .twoColumns768px {
+            float: none;
+        }
+    
+        #page .h2 {
+            font-size: 0.8em;
+        }
+        
+        .textHeading {
+            font-size: 1.2em;
+        }
+    
+        #page h1 {
+            
+            font-size: 1.4em;
+        }
+    
+    
+    
+        .innerColumns {
+            text-align: center;
+        }
+      
+    }
+    
+
 @media screen and (max-width: 420px) {
     
         #contrCSSimg {
@@ -496,7 +496,7 @@ h3#projects {
         }
     
         p#showMoreDevs {
-            margin-left: -40%;
+            margin-left: 0%;
             float:none;
             
         }
@@ -588,6 +588,7 @@ h3#projects {
     
         #headerList {
             height: 10%;
+  
         }
     
         .twoColumns#projekt {

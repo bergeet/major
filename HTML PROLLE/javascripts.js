@@ -260,6 +260,9 @@ $("#showMoreDevs").click(function () {
             $('.imgAvatar').css("display", "block");
             picVisible = true;
             $("#showMoreDevs").text("Visa mindre");
+            $(".slideshow").animate({
+                width: "toggle",
+            });
 
         } else {
             $("#gitTrendCSS").css("display","none");
@@ -267,6 +270,9 @@ $("#showMoreDevs").click(function () {
             $('.imgAvatar').css("display", "none");
             picVisible = false;
             $("#showMoreDevs").text("Visa mer");
+            $(".slideshow").animate({
+                width: "toggle",
+            });
 
         }
 
