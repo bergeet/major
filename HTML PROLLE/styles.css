@@ -263,6 +263,11 @@ div#contactForm {
 
 @media screen and (max-width: 420px) {
 
+    div.gitTrendCSS {
+        margin-left: 40%;
+        float:none;
+    }
+
     .twoColumns#button {
         float: none;
         display: inline-block;

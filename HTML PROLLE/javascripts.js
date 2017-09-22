@@ -205,6 +205,7 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language:javascript+
 $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+created:>" + date() + "&sort=stars&order=desc" }).done(function (data, status) {
     if (status == 'success') {
         $("#CSStrend").append("<strong>" + "CSS" + "</strong>" + "<br><br>");
+        
         for (var j = 0; j < 5; j++) {
             var link = data.items[j].html_url;
             var name = data.items[j].name;
@@ -213,22 +214,24 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
             var owner_link = data.items[j].owner.html_url;
             var owner_avatar = data.items[j].owner.avatar_url;
             var full_name = data.items[j].full_name;
-            console.log(full_name);
-
-
+           
             $("#contrCSStext").append(name); // Funkar inte riktigt 
-            $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (data, status ){
+
+            $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (cData, status ){
                 if (status == 'success') {
-                    $.each(data, function(i, item){
+                    var count = 0;
+
+                    $.each(cData, function(i, item){
                         var contrAvatar = item.avatar_url;
                         var contrHtml = item.html_url;
                         console.log(contrAvatar); 
                        
-                        $("#gitTrendCSS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>");
-                        
+                        $("#gitTrendCSS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>"+data.items[count].name+"<br><br>").css("display", "none");
+                  
                         
                         
                     })
+                    count++; 
                 }
             })
 
@@ -245,11 +248,13 @@ $("#showMoreDevs").click(function () {
 
     if ($(window).width() < 769) {
         if (!picVisible) {
+            $("#gitTrendCSS").css("display","inline-block");
             $('.imgAvatar').css("display", "block");
             picVisible = true;
             $("#showMoreDevs").text("Visa mindre");
 
         } else {
+            $("#gitTrendCSS").css("display","none");
             $('.imgAvatar').css("display", "none");
             picVisible = false;
             $("#showMoreDevs").text("Visa mer");
@@ -258,6 +263,7 @@ $("#showMoreDevs").click(function () {
 
     } else {
         if (!picVisible) {
+            $("#gitTrendCSS").css("display","inline-block");
             $('.imgAvatar').css("display", "block");
             $('.twoColumns#projekt').css("width", "100%");
             $('.twoColumns#projekt').css("float", "none");
@@ -277,6 +283,7 @@ $("#showMoreDevs").click(function () {
         }
 
         else {
+            $("#gitTrendCSS").css("display","none");
             $('.imgAvatar').css("display", "none");
             $('.twoColumns#projekt').css("width", "50%");
             $('.twoColumns#projekt').css("float", "left");
