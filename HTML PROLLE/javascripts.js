@@ -297,7 +297,7 @@ $("#showMoreDevs").click(function () {
             $("#gitTrendJS").css("display","none");
             $('.imgAvatar').css("display", "none");
             $('.twoColumns#projekt').css("width", "50%");
-            $('.twoColumns#projekt').css("float", "left");
+            $('.twoColumns#projekt').css("float", "none");
             $("#CSStrend").css({
                 'float': 'none',
                 'width': '100%',
