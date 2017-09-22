@@ -212,6 +212,17 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
             var amountStars = data.items[j].stargazers_count;
             var owner_link = data.items[j].owner.html_url;
             var owner_avatar = data.items[j].owner.avatar_url;
+            var full_name = data.items[j].full_name;
+
+            $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (data, status ){
+                if (status == 'success') {
+                    $.each(data, function(){
+                        var contrAvatar = data.avatar_url;
+                        console.log(contrAvatar);
+                        $("#CSStrend").append("<img src='"+contrAvatar+"'>");
+                    })
+                }
+            })
 
             $("#CSStrend").append("<a href = '" + link + "'>" + "<strong>" + name + "</strong>" + "</a>" + " | Ägare: " + "<a href = '" + owner_link + "'>" + owner_name + "</a>" + " | ★x" + amountStars + "<br>" + "<img class = 'imgAvatar' src='" + owner_avatar + "' alt = 'avatar_bild'>" + "<br>");
             $(".imgAvatar").css("display", "none");
@@ -242,8 +253,14 @@ $("#showMoreDevs").click(function () {
             $('.imgAvatar').css("display", "block");
             $('.twoColumns#projekt').css("width", "100%");
             $('.twoColumns#projekt').css("float", "none");
-            $("#CSStrend").addClass("twoParallel");
-            $("#JStrend").addClass("twoParallel");
+            $("#CSStrend").css({
+                'float': 'left',
+                'width': '50%',
+                'text-align' : 'center'});
+            $("#JStrend").css({
+                'float': 'left',
+                'width': '50%',
+                'text-align' : 'center'}); 
             $(".slideshow").animate({
                 width: "toggle",
             });
@@ -255,8 +272,14 @@ $("#showMoreDevs").click(function () {
             $('.imgAvatar').css("display", "none");
             $('.twoColumns#projekt').css("width", "50%");
             $('.twoColumns#projekt').css("float", "left");
-            $("#CSStrend").removeClass("twoParallel");
-            $("#JStrend").removeClass("twoParallel");
+            $("#CSStrend").css({
+                'float': 'none',
+                'width': '100%',
+                'text-align' : 'center'});
+            $("#JStrend").css({
+                'float': 'none',
+                'width': '100%',
+                'text-align' : 'center'}); 
             $(".slideshow").animate({
                 width: "toggle",
             });

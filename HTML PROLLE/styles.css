@@ -367,6 +367,10 @@ div#contactForm {
         height: 10%;
     }
 
+    .twoColumns#projekt {
+        float:none;
+    }
+
     
 
     /* Hamburger meny */
