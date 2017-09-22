@@ -632,6 +632,7 @@ div.gitTrend {
     display: inline-block;
     width: 10%;
     border-radius: 10px;
+    margin:10px;
 }
 
 #contrCSS {

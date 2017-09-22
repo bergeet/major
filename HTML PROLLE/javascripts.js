@@ -221,10 +221,11 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
                 if (status == 'success') {
                     $.each(data, function(i, item){
                         var contrAvatar = item.avatar_url;
+                        var contrHtml = item.html_url;
                         console.log(contrAvatar); 
                        
-                        $("#gitTrendCSS").append("<img id = 'contrCSSimg' src='"+contrAvatar+"'>");
-                       
+                        $("#gitTrendCSS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>");
+                        
                         
                         
                     })
@@ -233,7 +234,7 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
 
             $("#CSStrend").append("<a href = '" + link + "'>" + "<strong>" + name + "</strong>" + "</a>" + " | Ägare: " + "<a href = '" + owner_link + "'>" + owner_name + "</a>" + " | ★x" + amountStars + "<br>" + "<img class = 'imgAvatar' src='" + owner_avatar + "' alt = 'avatar_bild'>" + "<br>");
             $(".imgAvatar").css("display", "none");
-
+            
 
         }
 
