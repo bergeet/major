@@ -263,10 +263,31 @@ div#contactForm {
 
 @media screen and (max-width: 420px) {
 
-    div.gitTrendCSS {
-        margin-left: 40%;
-        float:none;
+    #contrCSSimg {
+        
+        height: auto;
+        display: inline-block;
+        max-width: 5%;
+        min-width: 20%;
+        border-radius: 10px;     
+        align-items: center;
+        margin: 10%;
+
     }
+
+    #gitTrendCSS {
+        margin-left: 50%;
+        width: 100%;
+    }
+    #gitTrendJS {
+        margin-left: 50%;
+        width: 100%;
+    }
+
+  
+
+
+  
 
     .twoColumns#button {
         float: none;
@@ -621,16 +642,7 @@ h3#projects {
 
 }
 
-div.gitTrend {
-   
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    white-space: nowrap;
-    overflow: hidden;
 
-
-}
 #contrCSSimg {
     
     height: auto;
