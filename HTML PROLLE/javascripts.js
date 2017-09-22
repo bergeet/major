@@ -213,14 +213,15 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
             var owner_link = data.items[j].owner.html_url;
             var owner_avatar = data.items[j].owner.avatar_url;
             var full_name = data.items[j].full_name;
+            console.log(full_name);
 
             $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (data, status ){
                 if (status == 'success') {
-                    $.each(data, function(){
-                        var contrAvatar = data.avatar_url;
-                        alert(contrAvatar);
-                        console.log(contrAvatar);
-                        $("#CSStrend").append("<img src='"+contrAvatar+"'>");
+                    $.each(data, function(i, item){
+                        var contrAvatar = item.avatar_url;
+                        console.log(contrAvatar); 
+                       
+                        $("#CSStrend").append("<img id = 'contrCSSimg' src='"+contrAvatar+"'>");
                     })
                 }
             })
