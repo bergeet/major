@@ -275,7 +275,7 @@ $("#showMoreDevs").click(function () {
             $("#gitTrendCSS").css("display","inline-block");
             $("#gitTrendJS").css("display","inline-block");
             $('.imgAvatar').css("display", "block");
-            $('.twoColumns#projekt').css("width", "100%");
+            //$('.twoColumns#projekt').css("width", "100%");
             $('.twoColumns#projekt').css("float", "none");
             $("#CSStrend").css({
                 'float': 'left',
@@ -296,7 +296,7 @@ $("#showMoreDevs").click(function () {
             $("#gitTrendCSS").css("display","none");
             $("#gitTrendJS").css("display","none");
             $('.imgAvatar').css("display", "none");
-            $('.twoColumns#projekt').css("width", "50%");
+            //$('.twoColumns#projekt').css("width", "50%");
             $('.twoColumns#projekt').css("float", "none");
             $("#CSStrend").css({
                 'float': 'none',
