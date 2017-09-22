@@ -193,6 +193,19 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language:javascript+
             var amountStars = data.items[i].stargazers_count;
             var owner_link = data.items[i].owner.html_url;
             var owner_avatar = data.items[i].owner.avatar_url;
+            var full_name = data.items[i].full_name;
+
+            $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (cData, status ){
+                if (status == 'success') {
+
+                    $.each(cData, function(j, item){
+                        var contrAvatar = item.avatar_url;
+                        var contrHtml = item.html_url;
+                 
+                        $("#gitTrendJS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
+                    })
+                }
+            })
 
             $("#JStrend").append("<a href = '" + link + "'>" + "<strong>" + name + "</strong>" + "</a>" + " | Ägare: " + "<a href = '" + owner_link + "'>" + owner_name + "</a>" + " | ★x" + amountStars + "<br>" + "<img class = 'imgAvatar' src='" + owner_avatar + "' alt = 'avatar_bild'>" + "<br>");
             $(".imgAvatar").css("display", "none");
@@ -215,23 +228,17 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
             var owner_avatar = data.items[j].owner.avatar_url;
             var full_name = data.items[j].full_name;
            
-            $("#contrCSStext").append(name); // Funkar inte riktigt 
 
             $.ajax({url: "https://api.github.com/repos/"+full_name+"/contributors"}).done(function (cData, status ){
                 if (status == 'success') {
-                    var count = 0;
 
                     $.each(cData, function(i, item){
+
                         var contrAvatar = item.avatar_url;
                         var contrHtml = item.html_url;
-                        console.log(contrAvatar); 
-                       
-                        $("#gitTrendCSS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>"+data.items[count].name+"<br><br>").css("display", "none");
-                  
-                        
-                        
+                 
+                        $("#gitTrendCSS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
                     })
-                    count++; 
                 }
             })
 
@@ -249,12 +256,14 @@ $("#showMoreDevs").click(function () {
     if ($(window).width() < 769) {
         if (!picVisible) {
             $("#gitTrendCSS").css("display","inline-block");
+            $("#gitTrendJS").css("display","inline-block");
             $('.imgAvatar').css("display", "block");
             picVisible = true;
             $("#showMoreDevs").text("Visa mindre");
 
         } else {
             $("#gitTrendCSS").css("display","none");
+            $("#gitTrendJS").css("display","none");
             $('.imgAvatar').css("display", "none");
             picVisible = false;
             $("#showMoreDevs").text("Visa mer");
@@ -264,6 +273,7 @@ $("#showMoreDevs").click(function () {
     } else {
         if (!picVisible) {
             $("#gitTrendCSS").css("display","inline-block");
+            $("#gitTrendJS").css("display","inline-block");
             $('.imgAvatar').css("display", "block");
             $('.twoColumns#projekt').css("width", "100%");
             $('.twoColumns#projekt').css("float", "none");
@@ -284,6 +294,7 @@ $("#showMoreDevs").click(function () {
 
         else {
             $("#gitTrendCSS").css("display","none");
+            $("#gitTrendJS").css("display","none");
             $('.imgAvatar').css("display", "none");
             $('.twoColumns#projekt').css("width", "50%");
             $('.twoColumns#projekt').css("float", "left");
