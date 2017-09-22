@@ -218,6 +218,7 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
                 if (status == 'success') {
                     $.each(data, function(){
                         var contrAvatar = data.avatar_url;
+                        alert(contrAvatar);
                         console.log(contrAvatar);
                         $("#CSStrend").append("<img src='"+contrAvatar+"'>");
                     })
