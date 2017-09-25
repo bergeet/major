@@ -129,14 +129,16 @@ hr {
 }
 
 p#presentation {
-    width: 50%;
+    width: 80%;
 }
 
 
 
 img.aboutUsImg {
-    width: 17%;
+    width: 20%;
     height: auto;
+    min-width:150px;
+    min-height:150px;
     border-radius: 12px;
     margin-bottom: 5%;
     float:right;
@@ -152,8 +154,6 @@ p.innerColumns {
     text-align: center;
     margin-bottom: 1%;
 }
-
-
 
 
 /* Container for skill bars */
@@ -188,6 +188,11 @@ p.innerColumns {
 
 
 @media screen and (max-width: 768px) {
+
+    img.aboutUsImg {
+        min-width: 100px;
+        min-height: 100px;
+    }
     
     .textHeading {
         font-size: 1.5em;
@@ -212,7 +217,7 @@ p.innerColumns {
 
  
 .skillmeter {
-    width: 50%;
+    width: 60%;
     background-color: lightgray;
     
  }
@@ -251,4 +256,37 @@ p.innerColumns {
 #angular2 {
     width: 60%;
    background-color: #7C76A3;
+}
+
+
+@media screen and (max-width: 420px) {
+    
+    .headerItem{
+        float:left;
+    }
+    
+    img.aboutUsImg {
+        float:none;
+
+    }
+
+    #presentation{
+        width:100%;
+        margin-left:10%;
+    }
+
+    * {
+        text-align:center;
+
+    }
+
+    .skillmeter {
+        width:100%;
+    }
+
+    
+     #skillpara {
+        text-align:center;
+    }
+
 }
