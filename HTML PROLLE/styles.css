@@ -324,6 +324,7 @@ h3#projects {
 
 }
 
+
 @media screen and (max-width: 948px){
     .contactColumns {
 
@@ -405,7 +406,7 @@ h3#projects {
 }
 
 #contrCSStext {
-    position:relative;
+    
 }
 
 
@@ -531,7 +532,7 @@ input.valid {
         }
     
         p#showMoreDevs {
-            margin-left: 0%;
+            margin-left: 15%;
             float:none;
             
         }
@@ -601,6 +602,10 @@ input.valid {
             visibility: hidden;
             height: 0;
         }
+
+        #nav-icon1.open {
+            top: 8%;
+        }
     
         #nav-icon1 {
             visibility: visible;
@@ -609,20 +614,32 @@ input.valid {
             position:fixed;
            
         }
+
+        body.open {
+            opacity: 0.5;
+        }
     
         #header.open {
-    
+            display: inline;
             visibility: visible;
             background-color: #f5f6f7;
             height: 10%;
-    
         }
-    
+
         #headerList {
-            height: 10%;
+            height: 100%;
+        }    
+            
+    
+        
+        #headerList.open {
+            height: 100%;
+            margin-top: 20%;
+            
   
         }
     
+       
         .twoColumns#projekt {
             float:none;
         }
@@ -653,7 +670,7 @@ input.valid {
         background: #000000;
         border-radius: 9px;
         opacity: 1;
-        left: -80%;
+        left: 20%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -o-transform: rotate(0deg);
@@ -706,5 +723,6 @@ input.valid {
          width: 100%;
      }
     
-    } /* max-420 ends here */
+     }
+      /* max-420 ends here */
     
