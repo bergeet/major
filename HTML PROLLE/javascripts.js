@@ -2,18 +2,21 @@
 
 $(document).ready(function () {
 
+    var fieldsEmpty = true;
 $("#fnamn").keyup(function(event) {
 
     var input = $(this);
     var inputVal = input.val();
-    console.log(input);
 
     if(inputVal){
         $("#errorFnamn").css("display", "none");
-        input.removeClass("invalid").addClass("valid");
+        fieldsEmpty = false;
+        
     } else {
+        $("#errorFnamn").empty();
+        $("#errorFnamn").append('<li>Fältet förnamn får inte vara tomt.</li>');
         $("#errorFnamn").css("display", "block");
-        input.removeClass("valid").addClass("invalid");
+        fieldsEmpty = true;
     }
 
 });
@@ -22,14 +25,16 @@ $("#enamn").keyup(function(event) {
     
         var input = $(this);
         var inputVal = input.val();
-        console.log(input);
     
         if(inputVal){
             $("#errorEnamn").css("display", "none");
             input.removeClass("invalid").addClass("valid");
+            fieldsEmpty = false;
         } else {
+            $("#errorEnamn").empty();
+            $("#errorEnamn").append('<li>Fältet efternamn får inte vara tomt.</li>');
             $("#errorEnamn").css("display", "block");
-            input.removeClass("valid").addClass("invalid");
+            fieldsEmpty = true;
         }
     
     });
@@ -38,14 +43,16 @@ $("#enamn").keyup(function(event) {
         
             var input = $(this);
             var inputVal = input.val();
-            console.log(input);
         
             if(inputVal){
                 $("#errorEmail").css("display", "none");
-                input.removeClass("invalid").addClass("valid");
+                fieldsEmpty = false;
+
             } else {
                 $("#errorEmail").css("display", "block");
-                input.removeClass("valid").addClass("invalid");
+                $("#errorEmail").empty();
+                $("#errorEmail").append('<li>Fältet Epost får inte vara tomt.</li>');
+                fieldsEmpty = true;
             }
         
         });
@@ -53,18 +60,61 @@ $("#enamn").keyup(function(event) {
             
                 var input = $(this);
                 var inputVal = input.val();
-                console.log(input);
+                var regx = new RegExp("^[0-9]*$")
             
                 if(inputVal){
                     $("#errorPhone").css("display", "none");
-                    input.removeClass("invalid").addClass("valid");
+                    fieldsEmpty = false;
+
+                    if(!regx.test(inputVal)) {
+                        console.log(inputVal);
+                        console.log(regx);
+                        $("#errorPhone").css("display", "block");
+                        $("#errorPhone").empty();
+                        $("#errorPhone").append('<li>Fältet Telefonnummer får endast innehålla siffror.</li>');
+                    }
+                   
+
                 } else {
                     $("#errorPhone").css("display", "block");
-                    input.removeClass("valid").addClass("invalid");
-                }
+                    $("#errorPhone").empty();
+                    $("#errorPhone").append('<li>Fältet Telefonnummer får inte vara tomt.</li>');
+                    fieldsEmpty = true;
+                }              
             
             });
-                    
+
+            $("#meddelande").keyup(function(event) {
+                
+                    var input = $(this);
+                    var inputVal = input.val();
+                
+                    if(inputVal){
+                        $("#errorMessage").css("display", "none");
+                        fieldsEmpty = false;
+        
+                    } else {
+                        $("#errorMessage").css("display", "block");
+                        $("#errorMessage").empty();
+                        $("#errorMessage").append('<li>Fältet meddelande får inte vara tomt.</li>');
+                        fieldsEmpty = true;
+                    }
+                
+                });            
+
+$("#submit").click(function () {
+    if(!fieldsEmpty) {
+        $("#errorSubmit").css("display", "none");
+        return true;
+
+    } else {
+        
+        $("#errorSubmit").css("display", "block");
+        $("#errorSubmit").empty();
+        $("#errorSubmit").append('<li>Alla fälten måste vara ifyllda.</li>');
+        return false;
+    }
+});
 
     load();
     $(function (scrolls) {
