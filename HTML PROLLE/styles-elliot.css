@@ -158,8 +158,8 @@ p.innerColumns {
 
 /* Container for skill bars */
 .container {
-    width: 50%; /* Full width */
-    background-color: #ddd; /* Grey background */
+    width: 50%; 
+    background-color: #ddd; 
 }
 
 .percentage-count {
@@ -251,4 +251,48 @@ p.innerColumns {
 #angular2 {
     width: 50%;
    background-color: #7C76A3;
+}
+
+@media screen and (max-width: 420px) {
+
+* {
+    text-align: center;
+}
+
+img.aboutUsImg {
+    width: 17%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 5%;
+    float:none;
+
+}
+#presentation {
+    width: 100%;
+    margin-left: 25%;
+}
+
+.skillmeter {
+    width: 100%;
+    background-color: lightgray;
+    
+ }
+
+ #skillPara {
+     text-align: center;
+ }
+
+ 
+#headerList {
+    
+     width: 100%;
+     margin: 0;
+     text-align: left;
+ }
+ 
+ .headerItem {
+     display: inline;
+
+ }
+ 
 }

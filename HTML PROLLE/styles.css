@@ -92,12 +92,13 @@ body {
 #page .content {
     padding: 2%;
     flex-direction: column;
-    width: 80%;
+   /* width: 80%;*/
     margin-top: 4%;
     background-color: rgba(122, 122, 122, 0.7);
     background-size: 100%;  
     text-align: center;
     margin-left: 10%;
+    margin-right: 10%;
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom: 4%;
@@ -227,9 +228,9 @@ h3#projects {
  }
  .container {
     text-align: left;
-    width:20%;
-    min-width: 350px;
-    height:50%;
+    width:100%;
+
+    height:40%;
     background-color:rgba(211, 211, 211, 0.8);
     padding:10px;
     
@@ -305,8 +306,6 @@ h3#projects {
    
     height: 50%;
     width: 50%;
-    min-height: 250px;
-    min-width: 250px;
     padding:0;
     margin:0;
     border: solid black 2px;
@@ -428,22 +427,8 @@ input.valid {
 
 @media screen and (max-width: 768px) {
     
-        .slideshow {
-            width: 100%;
-            margin-right:50%;
-
-        }
-
-        .bildspel{
-            height: 50%;
-            width: 50%;
-            min-height: 200px;
-            min-width: 200px;
-            padding:0;
-            margin:0;
-            border: solid black 2px;
-            border-radius: 5px;
-        }
+        
+        
     
         p#showMoreDevs {
             margin-left: -20%;
@@ -473,9 +458,7 @@ input.valid {
             width: 100%;
         }
     
-        .twoColumns768px {
-            float: none;
-        }
+
     
         #page .h2 {
             font-size: 0.8em;
@@ -536,23 +519,10 @@ input.valid {
             float:none;
             
         }
-        
-        
-        .slideshow {
-            margin-left: 10%;
-            margin-right:0%;
+
             
-        }
-    
-        .bildspel {
-            height: 50%;
-            width: 50%;
-            padding:0;
-            margin:0;
-            border: solid black 2px;
-            border-radius: 5px;
-        }
-    
+
+      
     
         #page h2 {
             font-size: 1.2em;
@@ -615,7 +585,7 @@ input.valid {
            
         }
 
-        body.open {
+        #page.open {
             opacity: 0.5;
         }
     
@@ -627,10 +597,17 @@ input.valid {
         }
 
         #headerList {
-            height: 100%;
-        }    
             
-    
+             width: 100%;
+             margin: 0;
+             text-align: left;
+             height: 10%;
+         }
+         
+         .headerItem {
+             display: inline;
+        
+         }
         
         #headerList.open {
             height: 100%;
@@ -722,6 +699,11 @@ input.valid {
      .twoColumns {
          width: 100%;
      }
+     form {
+        text-overflow: ellipsis;
+     }
+
+     
     
      }
       /* max-420 ends here */
