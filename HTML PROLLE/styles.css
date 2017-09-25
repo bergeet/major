@@ -10,6 +10,9 @@
 p {
     font-size:110%;
 }
+li {
+    font-size:0.8em;
+}
 
 
 html, body{
@@ -82,8 +85,7 @@ body {
 
 #page h1 {
 
-    font-size: 4em;
-    font-weight: 5000;   
+    font-size: 4em;  
     border: solid;
     padding: 4%;
     margin-bottom: 20%;
@@ -262,7 +264,7 @@ h3#projects {
     
  }
 
- #skillPara {
+ .skillPara {
      margin-bottom: 0%;
      font-size: 1.1em;
      margin-left:0%;
@@ -403,19 +405,6 @@ h3#projects {
 #contrCSS {
 
     max-width: 60%
-}
-
-#contrCSStext {
-    
-}
-
-
-input.invalid {
-    border: solid 3px, red;
-}
-
-input.valid {
-    border: solid 3px, green;
 }
 
 .error {

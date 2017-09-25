@@ -86,8 +86,7 @@ a:visited {
 
 #page h1 {
 
-    font-size: 4em;
-    font-weight: 5000;   
+    font-size: 4em;  
     padding: 4%;
     margin-bottom: 20%;
     text-align: center;
@@ -217,7 +216,7 @@ p.innerColumns {
     
  }
 
- #skillPara {
+ .skillPara {
      margin-bottom: 0%;
      font-size: 1em;
      text-align: left;
@@ -278,7 +277,7 @@ img.aboutUsImg {
     
  }
 
- #skillPara {
+ .skillPara {
      text-align: center;
  }
 
