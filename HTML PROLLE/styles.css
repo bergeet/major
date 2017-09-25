@@ -256,15 +256,16 @@ h3#projects {
  }
  
  .skillmeter {
-    width: 80%;
+    width: 60%;
+    margin-left:20%;
     background-color: lightgray;
     
  }
 
  #skillPara {
      margin-bottom: 0%;
-     font-size: 1em;
-     text-align: left;
+     font-size: 1.1em;
+     margin-left:0%;
      
  }
 
