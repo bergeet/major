@@ -146,20 +146,28 @@
                         <form name="aForm">
 
                             <label for="fnamn">Förnamn:</label>
-
-                            <input type="text" id="fnamn" required pattern="^\D*$" title="Ange endast bokstäver.">
+                            <input type="text" id="fnamn">
+                            <ul id = "errorFnamn">
+                                <li>Förnamn måste vara ifyllt.</li>
+                            </ul>
 
                             <label for="enamn">Efternamn:</label>
-
                             <input type="text" id="enamn">
+                            <ul id = "errorEnamn">
+                                <li>Efternamn måste vara ifyllt.</li>
+                            </ul>
 
                             <label for="eAdress">Epost:</label>
-
                             <input type="email" id="eAdress" name="email">
+                            <ul id = "errorEmail">
+                                <li>Email måste vara ifyllt.</li>
+                            </ul>
 
                             <label for="phoneNr">Telefonnummer:</label>
-
                             <input type="text" id="phoneNr" name="phoneNr">
+                            <ul id = "errorPhone">
+                                <li>Telefonnumret måste vara ifyllt.</li>
+                            </ul>
 
                             <label for="meddelande">Meddelande: </label>
 

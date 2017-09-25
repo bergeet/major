@@ -2,7 +2,69 @@
 
 $(document).ready(function () {
 
+$("#fnamn").keyup(function(event) {
 
+    var input = $(this);
+    var inputVal = input.val();
+    console.log(input);
+
+    if(inputVal){
+        $("#errorFnamn").css("display", "none");
+        input.removeClass("invalid").addClass("valid");
+    } else {
+        $("#errorFnamn").css("display", "block");
+        input.removeClass("valid").addClass("invalid");
+    }
+
+});
+
+$("#enamn").keyup(function(event) {
+    
+        var input = $(this);
+        var inputVal = input.val();
+        console.log(input);
+    
+        if(inputVal){
+            $("#errorEnamn").css("display", "none");
+            input.removeClass("invalid").addClass("valid");
+        } else {
+            $("#errorEnamn").css("display", "block");
+            input.removeClass("valid").addClass("invalid");
+        }
+    
+    });
+
+    $("#eAdress").keyup(function(event) {
+        
+            var input = $(this);
+            var inputVal = input.val();
+            console.log(input);
+        
+            if(inputVal){
+                $("#errorEmail").css("display", "none");
+                input.removeClass("invalid").addClass("valid");
+            } else {
+                $("#errorEmail").css("display", "block");
+                input.removeClass("valid").addClass("invalid");
+            }
+        
+        });
+        $("#phoneNr").keyup(function(event) {
+            
+                var input = $(this);
+                var inputVal = input.val();
+                console.log(input);
+            
+                if(inputVal){
+                    $("#errorPhone").css("display", "none");
+                    input.removeClass("invalid").addClass("valid");
+                } else {
+                    $("#errorPhone").css("display", "block");
+                    input.removeClass("valid").addClass("invalid");
+                }
+            
+            });
+                    
 
     load();
     $(function (scrolls) {

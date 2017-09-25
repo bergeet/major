@@ -170,6 +170,7 @@ p.innerColumns {
 }
 
 
+
 #footer {
     text-align: center;
     margin-bottom: 1%;
@@ -247,6 +248,10 @@ h3#projects {
     background-color: #0A79FF;
     color:white;
     
+ }
+
+ #errorFnamn, #errorEnamn, #errorEmail, #errorPhone {
+     display:none;
  }
  
  .skillmeter {
@@ -400,6 +405,23 @@ h3#projects {
 
 #contrCSStext {
     position:relative;
+}
+
+
+input.invalid {
+    border: solid 3px, red;
+}
+
+input.valid {
+    border: solid 3px, green;
+}
+
+.error {
+    display: none;
+}
+
+.error_show{
+	color: red;
 }
 
 @media screen and (max-width: 768px) {
