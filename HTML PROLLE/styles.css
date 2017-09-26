@@ -172,7 +172,23 @@ p.innerColumns {
     
 }
 
+#contrJStext {
+    font-size:1.3em;
+    font-weight: bold;
+}
 
+#contrCSStext {
+    font-size:1.3em;
+    font-weight:bold;
+}
+
+#gitTrendCSS {
+    width: 100%;
+}
+
+#gitTrendJS {
+    width: 100%;
+}
 
 #footer {
     text-align: center;
@@ -199,9 +215,8 @@ div#contactForm {
 }
 
 #JStrend {
-            text-align: center;
-            font-size: 1em;
-        }
+  text-align: center;
+}
 
 #projekt h2 {
     font-size: 1.2em;
@@ -347,10 +362,9 @@ h3#projects {
     background-color: rgba(128, 128, 128, 0.45);
     border-radius: 15px;
     padding: 5px 2px;
-    width: 20%;
     font-size: 1em;
-    margin-left: -10%;
-    min-width: 100px;
+    margin-left:45%;
+    width:100px;
 }
 
 #showMoreDevs:hover {
@@ -364,9 +378,9 @@ h3#projects {
 
 .imgAvatar
 {
-    height:30%;
-    width:30%;
-    margin-left:35%;
+    height:15%;
+    width:15%;
+    margin-left:42%;
     border-radius: 10px;
 }
 
@@ -377,11 +391,9 @@ h3#projects {
 }
 
 .twoColumns#button {
-    float:right;
+    float:none;
     width: 50%;
-    align-items: center;
-
-
+    margin-left:50%;
 }
 
 
@@ -389,9 +401,15 @@ h3#projects {
     
     height: auto;
     display: inline-block;
-    max-width: 5%;
+    max-width:10%;
     border-radius: 10px;
-    margin:10px;
+}
+
+#contrJSimg {
+    height: auto;
+    display: inline-block;
+    max-width: 10%;
+    border-radius: 10px;
 }
 
 #contrCSS {
@@ -409,13 +427,9 @@ h3#projects {
 
 @media screen and (max-width: 768px) {
     
-        
-        
-    
-        p#showMoreDevs {
-            margin-left: -20%;
-            float:none;
-            
+
+        #showMoreDevs {
+           margin-left:38%;
         }
     
         .twoColumns#projekt {
@@ -436,7 +450,6 @@ h3#projects {
         
         #CSStrend {
            
-            
             width: 100%;
         }
     
@@ -467,45 +480,39 @@ h3#projects {
 
 @media screen and (max-width: 420px) {
     
+        #showMoreDevs {
+            margin-left:36%;
+        }
+
+        .imgAvatar
+        {
+            display:inline-block;
+        }
+
         #contrCSSimg {
             
-            height: auto;
             display: inline-block;
-            max-width: 5%;
+            max-width: 10%;
             min-width: 20%;
             border-radius: 10px;     
             align-items: center;
-            margin: 10%;
+            
     
         }
     
         #gitTrendCSS {
-            
             width: 100%;
         }
         #gitTrendJS {
-            
             width: 100%;
         }
     
     
         .twoColumns#button {
-            float: none;
-            display: inline-block;
-            margin-left: 0;
+            margin-left: 50%;
         
         }
-    
-        p#showMoreDevs {
-            margin-left: 15%;
-            float:none;
-            
-        }
 
-            
-
-      
-    
         #page h2 {
             font-size: 1.2em;
         }

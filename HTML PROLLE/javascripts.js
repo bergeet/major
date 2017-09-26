@@ -321,7 +321,7 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language:javascript+
                         var contrHtml = item.html_url;
                         var contrName = item.login;
                  
-                        $("#gitTrendJS").append(contrName + "<br><a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
+                        $("#gitTrendJS").append("<p id = 'contrNameJS'>" +contrName + "</p><br><a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
                     })
                 }
             })
@@ -357,7 +357,7 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
                         var contrHtml = item.html_url;
                         var contrName = item.login;
                  
-                        $("#gitTrendCSS").append(contrName +"<br><a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
+                        $("#gitTrendCSS").append("<p id = 'contrNameCSS'>" +contrName +"</p><br><a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
                     })
                 }
             })
@@ -375,8 +375,8 @@ $("#showMoreDevs").click(function () {
 
     if ($(window).width() < 769) {
         if (!picVisible) {
-            $("#gitTrendCSS").css("display","inline-block");
-            $("#gitTrendJS").css("display","inline-block");
+            $("#gitTrendCSS").css("display","inline");
+            $("#gitTrendJS").css("display","inline");
             $('.imgAvatar').css("display", "block");
             picVisible = true;
             $("#showMoreDevs").text("Visa mindre");
@@ -398,8 +398,8 @@ $("#showMoreDevs").click(function () {
 
     } else {
         if (!picVisible) {
-            $("#gitTrendCSS").css("display","inline-block");
-            $("#gitTrendJS").css("display","inline-block");
+            $("#gitTrendCSS").css("display","inline");
+            $("#gitTrendJS").css("display","inline");
             $('.imgAvatar').css("display", "block");
             //$('.twoColumns#projekt').css("width", "100%");
             $('.twoColumns#projekt').css("float", "none");
