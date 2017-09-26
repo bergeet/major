@@ -319,8 +319,9 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language:javascript+
                     $.each(cData, function(j, item){
                         var contrAvatar = item.avatar_url;
                         var contrHtml = item.html_url;
+                        var contrName = item.login;
                  
-                        $("#gitTrendJS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
+                        $("#gitTrendJS").append(contrName + "<br><a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
                     })
                 }
             })
@@ -354,8 +355,9 @@ $.ajax({ url: "https://api.github.com/search/repositories?q=language%3Acss+creat
 
                         var contrAvatar = item.avatar_url;
                         var contrHtml = item.html_url;
+                        var contrName = item.login;
                  
-                        $("#gitTrendCSS").append("<a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
+                        $("#gitTrendCSS").append(contrName +"<br><a href = '"+contrHtml+"'><img id = 'contrCSSimg' src='"+contrAvatar+"'></a>").css("display", "none");                      
                     })
                 }
             })
