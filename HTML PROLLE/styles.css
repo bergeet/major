@@ -132,7 +132,6 @@ hr {
 
 .twoColumns#projekt {
   
-
     align-items: center;
 }
 
@@ -148,28 +147,10 @@ a:visited {
     cursor: pointer;
 }
 
-img#bringMeUp {
-    
-    position: fixed;
-    bottom: 0;
-    border: none;
-    height: auto;
-    width: auto;
-    max-height: 100px;
-    max-width: 80px;
-
-
-}
-
 img.aboutUsImg {
     width: 30%;
     height: 30%;
     border-radius: 12px;
-}
-
-p.innerColumns {
-    text-align: left;
-    
 }
 
 #contrJStext {
@@ -195,21 +176,6 @@ p.innerColumns {
     margin-bottom: 1%;
 }
 
-input#namn {
-    border-radius: 2px;
-    border: solid 1px;
-    border-color: lightgray;
-}
-
-div#contactForm {
-    
-    height: 20%;
-    width:1%;
-    box-sizing:border-box;
-
-}
-
-
 #nav-icon1 {
     visibility: hidden;
 }
@@ -221,13 +187,6 @@ div#contactForm {
 #projekt h2 {
     font-size: 1.2em;
 }
-
-
-h3#projects {
-    float: left;
-    width: 50%;
-    }
-
 
  .container input[type=text], input[type=email], select, textarea {
     background-color: white;
@@ -331,7 +290,7 @@ h3#projects {
 }
 
 #map {
-    height: 366px;
+    height: 330px;
     width: 100%;
    }
 
@@ -384,19 +343,6 @@ h3#projects {
     border-radius: 10px;
 }
 
-.twoParallel{
-    float: left;
-    width: 50%;
-    text-align: center;
-}
-
-.twoColumns#button {
-    float:none;
-    width: 50%;
-    margin-left:50%;
-}
-
-
 #contrCSSimg {
     
     height: auto;
@@ -410,19 +356,6 @@ h3#projects {
     display: inline-block;
     max-width: 10%;
     border-radius: 10px;
-}
-
-#contrCSS {
-
-    max-width: 60%
-}
-
-.error {
-    display: none;
-}
-
-.error_show{
-	color: red;
 }
 
 @media screen and (max-width: 768px) {
@@ -452,12 +385,6 @@ h3#projects {
            
             width: 100%;
         }
-    
-
-    
-        #page .h2 {
-            font-size: 0.8em;
-        }
         
         .textHeading {
             font-size: 1.2em;
@@ -466,12 +393,6 @@ h3#projects {
         #page h1 {
             
             font-size: 1.4em;
-        }
-    
-    
-    
-        .innerColumns {
-            text-align: center;
         }
       
     }
@@ -505,12 +426,6 @@ h3#projects {
         }
         #gitTrendJS {
             width: 100%;
-        }
-    
-    
-        .twoColumns#button {
-            margin-left: 50%;
-        
         }
 
         #page h2 {
@@ -572,10 +487,6 @@ h3#projects {
             margin-top: 10%;
             position:fixed;
            
-        }
-
-        #page.open {
-            opacity: 0.5;
         }
     
         #header.open {
